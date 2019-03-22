@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0px;
+                padding: 0px;
+            }
+
+            .background {
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                right: 0px;
+                height: 1000px;
+                background-color: lightgray;
+            }
+
+            .menu {
+                width: 0px;
+                height: 0px;
+            }
+
+            .menu-button {
+                position: fixed;
+                padding: 20px;
+                margin: 10px;
+                background-color: cornflowerblue;
+                border-radius: 6px;
+                transition: 0.1s;
+                user-select: none;
+                color: aliceblue;
+                cursor: pointer;
+                z-index: 100;
+                font-size: 20px;
+                box-shadow: 0px 6px 3px -0.7px royalblue;
+            }
+            #menu-state-opened:checked ~ .menu-button {
+                box-shadow: 0px 3px 0px -0.7px royalblue;
+                transform: translateY(3px);
+            }
+
+            .menu-background {
+                position: fixed;
+                top: 0px;
+                bottom: 0px;
+                left: 0px;
+                right: 0px;
+                background-color: black;
+                transition: 0.5s;
+                opacity: 0;
+                z-index: -10;
+            }
+            #menu-state-opened:checked ~ .menu-background {
+                opacity: 0.7;
+                z-index: 90;
+            }
+
+            .menu-items {
+                position: fixed;
+                z-index: -10;
+                top: 14px;
+                left: 110px;
+                padding: 7px;
+                background-color: cornflowerblue;
+                border-radius: 6px;
+                transition: 0.3s;
+                opacity: 0;
+                transform: translateY(-200px)
+            }
+            #menu-state-opened:checked ~ .menu-items {
+                z-index: 95;
+                opacity: 1;
+                transform: translateY(0px)
+            }
+
+            .menu-item {
+                display: inline-block;
+                padding: 6px 12px;
+                margin: 3px;
+                background-color: royalblue;
+                border-radius: 6px;
+                user-select: none;
+                cursor: pointer;
+            }
+            .menu-item * {
+                color: aliceblue;
+                outline: none;
+                text-decoration: none;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="background">
+            <div class="menu">
+                <input type="radio" name="menu-state" class="hidden-radio" id="menu-state-closed" checked hidden>
+                <input type="radio" name="menu-state" class="hidden-radio" id="menu-state-opened" hidden>
+                <label for="menu-state-opened" class="menu-button">Menu</label>
+                <div class="menu-items">
+                    <div class="menu-item"><a href="https://yandex.ru">Yandex</a></div>
+                    <div class="menu-item"><a href="https://google.com">Google</a></div>
+                    <div class="menu-item"><a href="https://duckduckgo.com">DuckDuckGo</a></div>
+                </div>
+                <label for="menu-state-closed" class="menu-background"></label>
+            </div>
+
+            <div style="text-align: center; background-color: pink; opacity: 0.4; margin: 5px">sometext</div>
+            <div style="text-align: center; background-color: pink; opacity: 0.4; margin: 5px">sometext</div>
+            <div style="text-align: center; background-color: pink; opacity: 0.4; margin: 5px">sometext</div>
+            <div style="text-align: center; background-color: pink; opacity: 0.4; margin: 5px">sometext</div>
+            <div style="text-align: center; background-color: pink; opacity: 0.4; margin: 5px">sometext</div>
+            <div style="text-align: center; background-color: pink; opacity: 0.4; margin: 5px">sometext</div>
+            <div style="text-align: center; background-color: pink; opacity: 0.4; margin: 5px">sometext</div>
+            <div style="text-align: center; background-color: pink; opacity: 0.4; margin: 5px">sometext</div>
+            <div style="text-align: center; background-color: pink; opacity: 0.4; margin: 5px">sometext</div>
+            <div style="text-align: center; background-color: pink; opacity: 0.4; margin: 5px">sometext</div>
+            <div style="text-align: center; background-color: pink; opacity: 0.4; margin: 5px">sometext</div>
+            <div style="text-align: center; background-color: pink; opacity: 0.4; margin: 5px">sometext</div>
+            <div style="text-align: center; background-color: pink; opacity: 0.4; margin: 5px">sometext</div>
+            <div style="text-align: center; background-color: pink; opacity: 0.4; margin: 5px">sometext</div>
+            <div style="text-align: center; background-color: pink; opacity: 0.4; margin: 5px">sometext</div>
+            <div style="text-align: center; background-color: pink; opacity: 0.4; margin: 5px">sometext</div>
+            <div style="text-align: center; background-color: pink; opacity: 0.4; margin: 5px">sometext</div>
+            <div style="text-align: center; background-color: pink; opacity: 0.4; margin: 5px">sometext</div>
+            <div style="text-align: center; background-color: pink; opacity: 0.4; margin: 5px">sometext</div>
+            <div style="text-align: center; background-color: pink; opacity: 0.4; margin: 5px">sometext</div>
+            <div style="text-align: center; background-color: pink; opacity: 0.4; margin: 5px">sometext</div>
+            <div style="text-align: center; background-color: pink; opacity: 0.4; margin: 5px">sometext</div>
+            <div style="text-align: center; background-color: pink; opacity: 0.4; margin: 5px">sometext</div>
+            <div style="text-align: center; background-color: pink; opacity: 0.4; margin: 5px">sometext</div>
+            <div style="text-align: center; background-color: pink; opacity: 0.4; margin: 5px">sometext</div>
+            <div style="text-align: center; background-color: pink; opacity: 0.4; margin: 5px">sometext</div>
+            <div style="text-align: center; background-color: pink; opacity: 0.4; margin: 5px">sometext</div>
+            <div style="text-align: center; background-color: pink; opacity: 0.4; margin: 5px">sometext</div>
+            <div style="text-align: center; background-color: pink; opacity: 0.4; margin: 5px">sometext</div>
+            <div style="text-align: center; background-color: pink; opacity: 0.4; margin: 5px">sometext</div>
+            <div style="text-align: center; background-color: pink; opacity: 0.4; margin: 5px">sometext</div>
+            <div style="text-align: center; background-color: pink; opacity: 0.4; margin: 5px">sometext</div>
+            <div style="text-align: center; background-color: pink; opacity: 0.4; margin: 5px">sometext</div>
+        </div>
+    </body>
+</html>
